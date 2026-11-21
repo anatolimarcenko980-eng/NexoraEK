@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="dji-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E2347"/>
+      <stop offset="100%" stop-color="#071329"/>
+    </linearGradient>
+    <linearGradient id="dji-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#997A15"/>
+    </linearGradient>
+    <filter id="dji-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <circle cx="32" cy="32" r="30" fill="url(#dji-bg)" stroke="url(#dji-gold)" stroke-width="1.75" filter="url(#dji-shadow)"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#D4AF37" stroke-width="0.75" stroke-dasharray="2 1.5" stroke-opacity="0.6"/>
+
+  <!-- Historic Heraldic Seal Elements -->
+  <!-- Top decorative star -->
+  <polygon points="32,9 33.5,13 37.5,13.5 34.5,16 35.5,20 32,18 28.5,20 29.5,16 26.5,13.5 30.5,13" fill="url(#dji-gold)"/>
+
+  <!-- Bold Serif "DOW" -->
+  <text x="32" y="32" text-anchor="middle" font-family="'Times New Roman', Times, 'Georgia', serif" font-weight="900" font-size="14.5" fill="#FFFFFF" letter-spacing="0.5">DOW</text>
+  
+  <!-- Subtle line divider with diamond -->
+  <line x1="16" y1="36" x2="48" y2="36" stroke="url(#dji-gold)" stroke-width="1.2" stroke-linecap="round"/>
+  <polygon points="32,34 34,36 32,38 30,36" fill="url(#dji-gold)"/>
+
+  <!-- Sub-label: JONES 30 -->
+  <text x="32" y="46" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="7.5" fill="url(#dji-gold)" letter-spacing="1.5">JONES</text>
+  <text x="32" y="55" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="8" fill="#FFFFFF" letter-spacing="1">30</text>
+</svg>

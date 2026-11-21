@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cyan-glow: #00d2ff;
+    --color-red-glow: #ff4d4d;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: #050608;
+    color: #f1f5f9;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* ========================================================
+   LIGHT THEME OVERRIDES (Clean Day-Trading Terminal Aesthetic)
+   ======================================================== */
+html.light {
+  color-scheme: light;
+}
+
+html.light body {
+  background-color: #f3f6fa !important;
+  color: #0f172a !important;
+}
+
+/* Surfaces and Card Backgrounds */
+html.light .bg-\[\#050608\],
+html.light .bg-\[\#08090d\],
+html.light .bg-\[\#0a0c10\],
+html.light .bg-\[\#090b10\],
+html.light .bg-\[\#0a0c12\],
+html.light .bg-\[\#0c0e15\],
+html.light .bg-\[\#0e1118\],
+html.light .bg-\[\#0e111a\],
+html.light .bg-\[\#0f121a\],
+html.light .bg-\[\#0f121b\],
+html.light .bg-\[\#10131c\],
+html.light .bg-\[\#10131d\],
+html.light .bg-\[\#10141f\],
+html.light .bg-\[\#141824\],
+html.light .bg-\[\#06070a\]\/60 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Secondary Panels & Form Fields */
+html.light .bg-\[\#161a26\],
+html.light .bg-\[\#181c26\],
+html.light .bg-\[\#1a1f2e\],
+html.light .bg-\[\#121624\],
+html.light .bg-\[\#121828\],
+html.light .bg-\[\#222733\],
+html.light .bg-\[\#1e293b\] {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Borders */
+html.light .border-\[\#1b1f2b\],
+html.light .border-\[\#1e293b\],
+html.light .border-\[\#1e2536\],
+html.light .border-\[\#232733\],
+html.light .border-\[\#14161e\],
+html.light .border-\[\#1e293b\]\/30,
+html.light .border-\[\#1e293b\]\/40,
+html.light .border-\[\#1e293b\]\/50,
+html.light .border-\[\#1e293b\]\/60,
+html.light .border-\[\#1e293b\]\/70,
+html.light .border-\[\#1e293b\]\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Typography Overrides */
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+/* Table Hover */
+html.light tr.hover\:bg-\[\#0f121b\]:hover,
+html.light tr.hover\:bg-\[\#11131a\]:hover,
+html.light .hover\:bg-\[\#151a28\]:hover,
+html.light .hover\:bg-\[\#1e293b\]:hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* Backdrop Modal Overlays */
+html.light .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+}
+
+/* Scrollbars */
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ========================================================
+   MIDNIGHT AMOLED BLACK THEME OVERRIDES
+   ======================================================== */
+html.midnight body {
+  background-color: #000000 !important;
+}
+
+html.midnight .bg-\[\#050608\],
+html.midnight .bg-\[\#08090d\],
+html.midnight .bg-\[\#0a0c10\],
+html.midnight .bg-\[\#090b10\],
+html.midnight .bg-\[\#0e1118\],
+html.midnight .bg-\[\#0e111a\],
+html.midnight .bg-\[\#0f121a\],
+html.midnight .bg-\[\#10131c\],
+html.midnight .bg-\[\#10131d\],
+html.midnight .bg-\[\#10141f\] {
+  background-color: #040404 !important;
+}
+
+html.midnight .border-\[\#1b1f2b\],
+html.midnight .border-\[\#1e293b\] {
+  border-color: #18181b !important;
+}
+
+/* Custom slick dark scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Tabular figures for financial tickers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Micro-animations */
+@keyframes flash-green {
+  0% { background-color: rgba(0, 210, 255, 0.25); color: #00d2ff; }
+  100% { background-color: transparent; }
+}
+
+@keyframes flash-red {
+  0% { background-color: rgba(255, 77, 77, 0.25); color: #ff4d4d; }
+  100% { background-color: transparent; }
+}
+
+.flash-up {
+  animation: flash-green 0.7s ease-out;
+}
+
+.flash-down {
+  animation: flash-red 0.7s ease-out;
+}
+
+.auth-grid-backdrop {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(125, 211, 252, 0.14), transparent 68%),
+    radial-gradient(ellipse 45% 35% at 85% 22%, rgba(0, 210, 255, 0.06), transparent 70%),
+    linear-gradient(to right, rgba(148, 163, 184, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+}

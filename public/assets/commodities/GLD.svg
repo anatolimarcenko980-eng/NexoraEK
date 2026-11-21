@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#241B08"/>
+      <stop offset="70%" stop-color="#120D04"/>
+      <stop offset="100%" stop-color="#070501"/>
+    </radialGradient>
+    <!-- Outer Rim Gradient -->
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3B0"/>
+      <stop offset="25%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#FCD34D"/>
+      <stop offset="75%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#FFE082"/>
+    </linearGradient>
+    <!-- Ingot Top Facet -->
+    <linearGradient id="ingotTop" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FFFDEB"/>
+      <stop offset="40%" stop-color="#FDE047"/>
+      <stop offset="80%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+    <!-- Ingot Front Facet -->
+    <linearGradient id="ingotFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="35%" stop-color="#D97706"/>
+      <stop offset="80%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <!-- Ingot Right Facet -->
+    <linearGradient id="ingotRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="50%" stop-color="#92400E"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+    <!-- Secondary Ingot Facet -->
+    <linearGradient id="ingotBack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <!-- Specular Flare -->
+    <radialGradient id="glint" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#FFF7CD" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+
+  <!-- Circular Outer Badge -->
+  <circle cx="32" cy="32" r="30" fill="url(#bgGrad)"/>
+  <circle cx="32" cy="32" r="29.5" fill="none" stroke="url(#goldRim)" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#F59E0B" stroke-opacity="0.25" stroke-width="0.75"/>
+
+  <!-- Ingot 3D Group with Shadow -->
+  <g filter="url(#shadow)">
+    <!-- Main Ingot Base -->
+    <!-- Top Face -->
+    <polygon points="17,25 43,21 47,26 21,31" fill="url(#ingotTop)"/>
+    <!-- Front Face -->
+    <polygon points="21,31 47,26 43,43 17,47" fill="url(#ingotFront)"/>
+    <!-- Right Face -->
+    <polygon points="47,26 51,28 47,45 43,43" fill="url(#ingotRight)"/>
+    <!-- Highlights & Bevel Ridges -->
+    <polyline points="17,25 21,31 47,26" fill="none" stroke="#FFFBEB" stroke-width="0.75" opacity="0.85"/>
+    <line x1="21" y1="31" x2="17" y2="47" stroke="#FEF08A" stroke-width="0.5" opacity="0.6"/>
+
+    <!-- Hallmark Stamp on Front Face -->
+    <g transform="translate(30, 36) rotate(-7) scale(0.85)">
+      <!-- Au Symbol Stamp -->
+      <text x="0" y="0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="6" font-weight="900" fill="#451A03" opacity="0.9" letter-spacing="0.5">999.9</text>
+      <text x="0" y="5.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="4.5" font-weight="800" fill="#78350F" letter-spacing="1">FINE GOLD</text>
+    </g>
+
+    <!-- Chemical Hallmark Circle Stamp on Top Face -->
+    <ellipse cx="32" cy="26" rx="4" ry="1.8" fill="none" stroke="#B45309" stroke-width="0.4" opacity="0.6"/>
+    <text x="32" y="27" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="2.6" font-weight="900" fill="#78350F" opacity="0.8">Au</text>
+  </g>
+
+  <!-- Top Ingot Corner Sparkle/Flare -->
+  <path d="M 21 31 L 21 28 L 22 31 L 25 31 L 22 32 L 23 35 L 21 33 L 19 35 L 20 32 L 17 31 L 20 31 Z" fill="url(#glint)"/>
+  <circle cx="21" cy="31" r="2.5" fill="url(#glint)"/>
+
+  <!-- Subtle bottom label -->
+  <text x="32" y="57" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="5.5" font-weight="900" fill="#FCD34D" letter-spacing="1.5">GOLD</text>
+</svg>

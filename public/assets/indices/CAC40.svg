@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="cac-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051C3B"/>
+      <stop offset="100%" stop-color="#020C1C"/>
+    </linearGradient>
+    <linearGradient id="cac-tri" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0055A4"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EF4135"/>
+    </linearGradient>
+    <filter id="cac-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <circle cx="32" cy="32" r="30" fill="url(#cac-bg)" stroke="#0055A4" stroke-width="1.5" filter="url(#cac-shadow)"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-opacity="0.25"/>
+
+  <!-- Tricolor dynamic curved ribbon -->
+  <path d="M16 22 C26 15, 38 15, 48 22" stroke="url(#cac-tri)" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- CAC typography -->
+  <text x="32" y="38" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="13" fill="#FFFFFF" letter-spacing="1">CAC</text>
+
+  <!-- 40 mark -->
+  <text x="32" y="52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="10" fill="#EF4135" letter-spacing="1.5">40</text>
+</svg>
